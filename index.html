@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Happy Birthday, Chuti 💕</title>
+
+<!-- Fonts: a cursive display face for the romantic headings, a soft rounded face for body text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Falling hearts live here, behind everything -->
+<div class="hearts-bg" id="heartsBg" aria-hidden="true"></div>
+
+<main class="stage">
+
+  <!-- Progress indicator: 4 little hearts that fill in as she moves through the steps -->
+  <div class="progress" id="progress" aria-hidden="true">
+    <span class="progress-heart" data-step="1"></span>
+    <span class="progress-heart" data-step="2"></span>
+    <span class="progress-heart" data-step="3"></span>
+    <span class="progress-heart" data-step="4"></span>
+  </div>
+
+  <section class="card" id="card">
+
+    <!-- STEP 1 -->
+    <div class="step active" id="step1" data-step="1">
+      <p class="eyebrow">a little something for you 💌</p>
+      <h1 class="question">What is the name of your boyfriend call to you in love?</h1>
+      <input type="text" id="input1" class="answer-input" placeholder="type it here..." autocomplete="off">
+      <p class="hint" id="hint1">that's not quite it... try again 🥺</p>
+      <button class="btn-next" id="next1">Next <span class="arrow">→</span></button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" id="step2" data-step="2">
+      <p class="eyebrow">almost there 💗</p>
+      <h1 class="question">What is the most loving name you call your boyfriend?</h1>
+      <input type="text" id="input2" class="answer-input" placeholder="type it here..." autocomplete="off">
+      <p class="hint" id="hint2">not quite... think again 🥺</p>
+      <button class="btn-next" id="next2">Next <span class="arrow">→</span></button>
+    </div>
+
+    <!-- AUDIO INTERLUDE (shown between step 2 and step 3) -->
+    <div class="step" id="stepAudio" data-step="audio">
+      <div class="pulse-heart">💖</div>
+      <p class="audio-text">just a moment, my love...</p>
+      <button class="btn-skip" id="skipAudio">skip ➜</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" id="step3" data-step="3">
+      <p class="wish" id="wishText"></p>
+      <p class="message" id="messageText"></p>
+      <button class="btn-next" id="next3">Next <span class="arrow">→</span></button>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step" id="step4" data-step="4">
+      <p class="eyebrow">for you, Chuti 🎀</p>
+      <img src="images/flyer.png" alt="Happy Birthday Flyer" class="flyer-img" id="flyerImg">
+    </div>
+
+  </section>
+</main>
+
+<audio id="loveAudio" preload="auto">
+  <source src="audio/love-audio.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
